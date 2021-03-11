@@ -22,5 +22,22 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+   Route::get('/{any}', function(){
+            return view('vueapp');
+    })->where('any', '.*');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+   Route::get('/page', function () {
+        return view('page',
+            [
+                'title' => "Page 2 - A little about the Author",
+                'author' => json_encode([
+                        "name" => "Will Thompson",
+                        "role" => "Software Dev",
+                        "code" => "Learning Laravel w/ Vue"
+                ])
+            ]
+        );
+    });
+
+ 
