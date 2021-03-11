@@ -23,7 +23,7 @@
  <body>
             <div id="app">
                 <example-component></example-component>
-                <second-component></second-component>
+                <second-component :title="'{{$title}}'"></second-component>
             </div>
             <script type="text/javascript" src="js/app.js"></script>
         </body>

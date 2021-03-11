@@ -29,5 +29,5 @@ Vue.component('second-component', require('./components/SecondComponent.vue').de
  */
 
 const app = new Vue({
-    el: '#app',
+      el: '#app',
 });
